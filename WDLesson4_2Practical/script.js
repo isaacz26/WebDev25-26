@@ -13,7 +13,20 @@ function name(){
 */
 
 /* Challenge 2:  Create the function for Challenge 1 scenario */
-
+function recArea(){
+  let l=parseFloat(document.getElementById("l").value);
+  let w=parseFloat(document.getElementById("w").value);
+  let output=document.getElementById("output");
+  let A=l*w;
+  let message="";
+  
+  if(l<=0||w<=0){
+    message = "Inappropriate measurement";
+  }else{
+    message = `The area of the rectangle is ${A}`;
+  }
+  output.innerHTML = message;
+}
 
 
 /* Challenge 3:  Complete the function for Pets Challenge on pets.html.  
@@ -21,5 +34,26 @@ function name(){
 2) You will need to write HTML as part of the output.  
    For example, output.innerHTML = `<input src="pic.png">` would place the image in the <div>*/
 function pet(){
-
+  let a=document.getElementById("animal").value;
+  let e=document.getElementById("emotion").value;
+  let filename="";
+  if(a=="Bear" && e=="Funny"){
+    filename="funnyBear.jpg";
+  }
+  if(a=="Bear" && e=="Sad"){
+    filename="sadBear.jpg";
+  }
+  if(a=="Cat" && e=="Funny"){
+    filename="funnyCat.jpg";
+  }
+  if(a=="Cat" && e=="Sad"){
+    filename="sadCat.jpg";
+  }
+  if(a=="Dog" && e=="Funny"){
+    filename="funnyDog.jpg";
+  }
+  if(a=="Dog" && e=="Sad"){
+    filename="sadDog.jpg";
+  }
+  output.innerHTML=`<img src = "${filename}">`
 }

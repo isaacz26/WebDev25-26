@@ -13,4 +13,6 @@ Guideline:
 
 Use past examples, classwork and practicals to assist you in completing this practical.
 */
-
+function bmi(){
+       let b = parseInt(document.getElementById("b").value);
+}
