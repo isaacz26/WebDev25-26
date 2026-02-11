@@ -15,4 +15,17 @@ Use past examples, classwork and practicals to assist you in completing this pra
 */
 function bmi(){
        let b = parseInt(document.getElementById("b").value);
+       let m = parseInt(document.getElementById("m").value);
+       let bmi = b/(m*m);
+       let filename = "";
+       if(bmi<18.5){
+              filename="underweight.png";
+       }else if(bmi<=24.9){
+              filename="healthyweight.png";
+       }else if(bmi<=29.9){
+              filename="overweight.png";
+       }else if(bmi>=30){
+              filename="obeseweight.png";
+       }
+       output.innerHTML=`Your weight is ${bmi} <img src="${filename}">`;
 }

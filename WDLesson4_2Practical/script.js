@@ -55,5 +55,5 @@ function pet(){
   if(a=="Dog" && e=="Sad"){
     filename="sadDog.jpg";
   }
-  output.innerHTML=`<img src = "${filename}">`
+  output.innerHTML=`<img src = "${filename}">`;
 }
