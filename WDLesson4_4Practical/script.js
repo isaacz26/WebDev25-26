@@ -6,7 +6,10 @@
 */
 let correct;
 function generateProblem(){
-
+       let p1 = Math.floor(Math.random()*(20-0+1)+0);
+       let p2 = Math.floor(Math.random()*(20-0+1)+0);
+       problem.innerHTML = `${p1} + ${p2} =`;
+       correct = p1 + p2;
 }
 
 /* Challenge 3: Complete the function checkProblem by ,
@@ -18,8 +21,19 @@ function generateProblem(){
            b) otherwise set msg to "Incorrect. The answer is " followed by the correct answer.  Also include incorrect image
        4) Display msg in the output
 */
-function checkProblem(){
-
+function checkResponse(){
+       let B = parseInt(document.getElementById("response").value);
+       let op = document.getElementById("output");
+       let ans = "";
+       let img = "";
+       if(correct==B){
+              ans="Answer is correct";
+              img="correct.webp";
+       }else{
+              ans="Answer is incorrect";
+              img="incorrect.avif";
+       }
+       op.innerHTML = `${ans}<br><img src="${img}">`;
 }
 
 

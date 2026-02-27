@@ -18,14 +18,19 @@ function bmi(){
        let m = parseInt(document.getElementById("m").value);
        let bmi = b/(m*m);
        let filename = "";
+       let status =""
        if(bmi<18.5){
               filename="underweight.png";
+              status="Underweight";
        }else if(bmi<=24.9){
               filename="healthyweight.png";
+              status="Healthy Weight"
        }else if(bmi<=29.9){
               filename="overweight.png";
+              status="Overweight";
        }else if(bmi>=30){
               filename="obeseweight.png";
+              status="Obese"
        }
-       output.innerHTML=`Your weight is ${bmi} <img src="${filename}">`;
+       output.innerHTML=`Your weight is ${bmi} and you are ${status} <img src="${filename}">`;
 }
