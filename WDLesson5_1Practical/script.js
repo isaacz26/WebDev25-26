@@ -15,8 +15,8 @@ Year N: $xxxxxx
 function comp(){
     let p=parseFloat(document.getElementById("p").value);
     let r=parseFloat(document.getElementById("r").value);
-    let n=parseFloat(document.getElementById("n").value);
-    let t=parseFloat(document.getElementById("t").value);
+    let n=parseInt(document.getElementById("n").value);
+    let t=parseInt(document.getElementById("t").value);
     let op=document.getElementById("out");
     let build="";
     for(let T=0;T<=t;T++){
