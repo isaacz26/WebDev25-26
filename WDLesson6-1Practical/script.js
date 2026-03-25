@@ -42,23 +42,23 @@ function init(){
   }
   m.innerHTML = build;
   //Challenge 5:  Build cards for the seafoods. Place the build in the seafood container.
-  let build1 = ``;
+  build = ``;
   for(let x = 0; x < seafood_images.length; x++){
-    build1 += `<div class = "card">
+    build += `<div class = "card">
                 <h2>${seafood_titles[x]}</h2>
                 <img src = "images/${seafood_images[x]}">
                 <p>$${seafood_prices[x]}</p>
               </div>`;
   }
-  s.innerHTML = build1;
+  s.innerHTML = build;
   //Challenge 6:  Build cards for the desserts. Place the build in the dessert container.
-  let build2 = ``;
+  build = ``;
   for(let x = 0; x < dessert_images.length; x++){
-    build2 += `<div class = "card">
+    build += `<div class = "card">
                 <h2>${dessert_titles[x]}</h2>
                 <img src = "images/${dessert_images[x]}">
                 <p>$${dessert_prices[x]}</p>
               </div>`;
   }
-  d.innerHTML = build2;
+  d.innerHTML = build;
 }
