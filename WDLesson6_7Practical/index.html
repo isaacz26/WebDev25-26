@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD_6.7 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>NYC Open Data</h1>
+          <h2>Motor Vehicle Collisions</h2>
+      </div>
+    </div>
+
+    <div class="container subbanner">
+      <div>
+        <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
+        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data"> Motor Vehicle Collisions</a>
+        <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
+       </div>
+    </div>
+
+    <div class="container">
+      <div id="leftPanel">
+        <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
+        <div class="card">
+          <h3>SEARCH By Street Name</h3>
+          <input type="text" id="str" placeholder="Enter Street Name (all CAPS)">
+          <hr></hr>
+          <a class="button" onclick="filterByStr()"> Search </a>
+        </div>
+        <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
+        <div class="card">
+          <h3>SEARCH By Contributing Factor</h3>
+          <input type="text" id="factor" placeholder="Enter Factor">
+          <hr></hr>
+          <a class="button" onclick="filterByFactor()"> Search </a>
+        </div>
+
+        <!--Challenge 3: Create another UI in order to filter by complaint type. [See Challenge 4 in script.js] -->
+        <div class="card">
+          <h3>SEARCH By Time</h3>
+          <input type="text" id="time" placeholder="Enter Time">
+          <hr></hr>
+          <a class="button" onclick="filterByTime()"> Search </a>
+        </div>
+
+      </div>
+
+      <div class="card" id="rightPanel">
+        <h1>Motor Vehicle Collisions</h1>
+        <div id="result" class="container"></div>
+        <div id="output" class="container"></div>
+      </div>
+      
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Lesson 6.6 Practical</h3>
+    </div>  
+  </body>
+</html>
